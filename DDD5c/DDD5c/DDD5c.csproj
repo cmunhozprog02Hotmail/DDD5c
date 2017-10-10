@@ -361,8 +361,6 @@
     <Content Include="Views\Categorias\Index.cshtml" />
     <Content Include="Views\Categorias\Edit.cshtml" />
     <Content Include="Views\Fabricantes\Edit.cshtml" />
-    <Content Include="Views\Categorias\Delete.cshtml" />
-    <Content Include="Views\Fabricantes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -384,6 +382,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Fabricantes\Details.cshtml" />
     <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Fabricantes\Delete.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
