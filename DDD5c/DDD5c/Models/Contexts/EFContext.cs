@@ -13,5 +13,7 @@ namespace DDD5c.Models.Contexts
         public DbSet<Categoria> Categorias { get; set; }
 
         public DbSet<Fabricante> Fabricantes { get; set; }
+
+        public DbSet<Produto> Produtos { get; set; }
     }
 }
