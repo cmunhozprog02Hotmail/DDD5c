@@ -107,12 +107,25 @@ namespace DDD5c.Controllers
         }
 
         // GET: Produtos/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(long? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.
+                BadRequest);
+            }
+            Produto produto = context.Produtos.Where(p => p.ProdutoId ==
+            id).Include(c => c.Categoria).Include(f => f.Fabricante).
+            First();
+            if (produto == null)
+            {
+                return HttpNotFound();
+            }
+            return View(produto);
         }
+        
 
-        // POST: Produtos/Delete/5
+         // POST: Produtos/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
