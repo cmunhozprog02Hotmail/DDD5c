@@ -107,6 +107,7 @@ namespace DDD5c.Controllers
             Categoria categoria = context.Categorias.Find(id);
             context.Categorias.Remove(categoria);
             context.SaveChanges();
+            TempData["Message"] = "Categoria " + categoria.Nome.ToUpper() + " foi removida";
             return RedirectToAction("Index");
         }
     }
