@@ -1,12 +1,10 @@
-﻿using DDD5c.Models;
-using DDD5c.Models.Contexts;
-using System;
-using System.Collections.Generic;
+﻿using DDD5c.Models.Contexts;
+using Modelo.Tabelas;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
+
 
 namespace DDD5c.Controllers
 {

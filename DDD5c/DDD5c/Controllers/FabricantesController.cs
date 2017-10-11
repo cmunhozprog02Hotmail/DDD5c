@@ -1,5 +1,5 @@
-﻿using DDD5c.Models;
-using DDD5c.Models.Contexts;
+﻿using DDD5c.Models.Contexts;
+using Modelo.Cadastros;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
