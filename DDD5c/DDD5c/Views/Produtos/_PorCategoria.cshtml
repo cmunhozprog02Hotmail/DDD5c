@@ -1,5 +1,5 @@
 ﻿
-@model IEnumerable < Modelo.Tabelas.Categoria;
+@model IEnumerable <Modelo.Cadastros.Produto>
         <div class="panel panel-primary">
     <div class="panel-heading">
         Relação de PRODUTOS registrados para a Categoria
@@ -9,7 +9,10 @@
             <thead>
                 <tr>
                     <th>
+                        
                         @Html.DisplayNameFor(model => model.ProdutoId)
+
+                        
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Nome)
