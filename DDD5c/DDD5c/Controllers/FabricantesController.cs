@@ -1,5 +1,6 @@
 ﻿using DDD5c.Models.Contexts;
 using Modelo.Cadastros;
+using Servicos.Cadastros;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -9,7 +10,7 @@ namespace DDD5c.Controllers
 {
     public class FabricantesController : Controller
     {
-        private EFContext context = new EFContext();
+        private FabricanteServico context = new FabricanteServico();
         // GET: Fabricantes
         public ActionResult Index()
         {
