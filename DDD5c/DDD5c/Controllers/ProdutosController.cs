@@ -1,7 +1,4 @@
-﻿using DDD5c.Models.Contexts;
-using System.Linq;
-using System.Web.Mvc;
-using System.Data.Entity;
+﻿using System.Web.Mvc;
 using System.Net;
 using Modelo.Cadastros;
 using Servicos.Cadastros;
