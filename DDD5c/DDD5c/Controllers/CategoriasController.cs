@@ -63,6 +63,12 @@ namespace DDD5c.Controllers
             return GravarCategoria(categoria);
         }
 
+        // GET: Testes/Details/5
+        public ActionResult Details(long? id)
+        {
+            return ObterVisaoCategoriaPorId(id);
+        }
+
         // GET: Categorias/Edit/5
         public ActionResult Edit(long? id)
         {
