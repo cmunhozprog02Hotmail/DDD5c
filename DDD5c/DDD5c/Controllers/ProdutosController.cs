@@ -24,6 +24,7 @@ namespace DDD5c.Controllers
             {
                 return HttpNotFound();
             }
+            
             return View(produto);
         }
 
@@ -50,10 +51,12 @@ namespace DDD5c.Controllers
                     produtoServico.GravarProduto(produto);
                     return RedirectToAction("Index");
                 }
+                PopularViewBag(produto);
                 return View(produto);
             }
             catch
             {
+                PopularViewBag(produto);
                 return View(produto);
             }
         }
