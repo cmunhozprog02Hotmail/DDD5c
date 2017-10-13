@@ -14,7 +14,8 @@ namespace Modelo.Cadastros
 
         [Display(Name = "Data de Cadastro")]
         [Required(ErrorMessage = "Informe a data de cadastro do produto")]
-        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime? DataCadastro { get; set; }
 
         [Display(Name = "Categoria")]
