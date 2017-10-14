@@ -4,7 +4,7 @@ using System.Net;
 using System.Web.Mvc;
 
 
-namespace DDD5c.Areas.TabelasControllers
+namespace DDD5c.Areas.Tabelas.Controllers
 {
     public class CategoriasController : Controller
     {
