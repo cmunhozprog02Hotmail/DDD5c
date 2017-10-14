@@ -335,6 +335,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Areas\Tabelas\Views\web.config" />
     <Content Include="Areas\Cadastros\Views\web.config" />
+    <Content Include="Areas\Seguranca\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -435,6 +436,8 @@
     <Compile Include="Areas\Cadastros\CadastrosAreaRegistration.cs" />
     <Compile Include="Areas\Cadastros\Controllers\FabricantesController.cs" />
     <Compile Include="Areas\Cadastros\Controllers\ProdutosController.cs" />
+    <Compile Include="Areas\Seguranca\Models\Usuario.cs" />
+    <Compile Include="Areas\Seguranca\SegurancaAreaRegistration.cs" />
     <Compile Include="Areas\Tabelas\Controllers\CategoriasController.cs" />
     <Compile Include="Areas\Tabelas\TabelasAreaRegistration.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
@@ -477,6 +480,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cadastros\Models\" />
     <Folder Include="Areas\Cadastros\Views\Shared\" />
+    <Folder Include="Areas\Seguranca\Controllers\" />
+    <Folder Include="Areas\Seguranca\Views\Shared\" />
     <Folder Include="Areas\Tabelas\Models\" />
     <Folder Include="Areas\Tabelas\Views\Shared\" />
     <Folder Include="Models\Contexts\" />
