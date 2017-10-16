@@ -4,6 +4,7 @@ using System.Web;
 using Microsoft.AspNet.Identity.Owin;
 using DDD5c.Areas.Seguranca.Models;
 using Microsoft.AspNet.Identity;
+using System.Net;
 
 namespace DDD5c.Areas.Seguranca.Controllers
 {
@@ -59,5 +60,51 @@ namespace DDD5c.Areas.Seguranca.Controllers
                 ModelState.AddModelError("", error);
             }
         }
+
+        // GET Edit
+
+        public ActionResult Edit(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = GerenciadorUsuario.FindById(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            var uvm = new UsuarioViewModel();
+            uvm.Id = usuario.Id;
+            uvm.Nome = usuario.UserName;
+            uvm.Email = usuario.Email;
+            return View(uvm);
+        }
+        //POST EDIT
+        [HttpPost]
+        public ActionResult Edit(UsuarioViewModel uvm)
+        {
+            if (ModelState.IsValid)
+            {
+                Usuario usuario = GerenciadorUsuario.FindById(uvm.Id);
+                usuario.UserName = uvm.Nome;
+                usuario.Email = uvm.Email;
+                usuario.PasswordHash = GerenciadorUsuario.PasswordHasher.
+                HashPassword(uvm.Senha);
+                IdentityResult result = GerenciadorUsuario.Update(usuario)
+                ;
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    AddErrorsFromResult(result);
+                }
+            }
+            return View(uvm);
+        }
     }
+
+    
 }
