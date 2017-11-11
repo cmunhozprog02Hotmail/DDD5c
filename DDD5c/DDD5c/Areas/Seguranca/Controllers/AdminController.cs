@@ -8,7 +8,7 @@ using System.Net;
 
 namespace DDD5c.Areas.Seguranca.Controllers
 {
-    [Authorize]
+    
     public class AdminController : Controller
     {
         // GET: Seguranca/Admin
