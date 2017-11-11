@@ -22,8 +22,7 @@ namespace DDD5c.DAL
             return new IdentityDbContextAplicacao();
         }
     }
-    public class IdentityDbInit : DropCreateDatabaseIfModelChanges
-    <IdentityDbContextAplicacao>
+    public class IdentityDbInit : DropCreateDatabaseIfModelChanges <IdentityDbContextAplicacao>
     {
     }
 

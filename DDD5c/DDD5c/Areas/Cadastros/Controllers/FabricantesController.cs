@@ -5,6 +5,7 @@ using System.Web.Mvc;
 
 namespace DDD5c.Areas.Cadastros.Controllers
 {
+    [Authorize]
     public class FabricantesController : Controller
     {
         private FabricanteServico fabricanteServico = new FabricanteServico();

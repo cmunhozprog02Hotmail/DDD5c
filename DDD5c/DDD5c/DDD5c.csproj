@@ -126,6 +126,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Asp_Net_MVC_DB.mdf" />
+    <Content Include="App_Data\Asp_Net_MVC_DB_log.ldf">
+      <DependentUpon>Asp_Net_MVC_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\IdentityDB.mdf" />
     <Content Include="App_Data\IdentityDB_log.ldf">
       <DependentUpon>IdentityDB.mdf</DependentUpon>

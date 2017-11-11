@@ -6,8 +6,10 @@ using Servicos.Tabelas;
 
 namespace DDD5c.Areas.Cadastros.Controllers
 {
+    [Authorize]
     public class ProdutosController : Controller
     {
+       
         private ProdutoServico produtoServico = new ProdutoServico();
         private CategoriaServico categoriaServico = new CategoriaServico();
         private FabricanteServico fabricanteServico = new FabricanteServico();

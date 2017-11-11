@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace DDD5c.Areas.Tabelas.Controllers
 {
+    [Authorize]
     public class CategoriasController : Controller
     {
+        
         private CategoriaServico categoriaServico = new CategoriaServico();
 
         private ActionResult ObterVisaoCategoriaPorId(long? id)
